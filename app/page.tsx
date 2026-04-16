@@ -12,6 +12,7 @@ const projects = [
     vertical: "Education",
     week: "Week 3",
     accent: "bg-blue-500",
+    link: "https://studymate-ai-i4wtfqeim2zch8fnnpantb.streamlit.app/",
   },
   {
     title: "SupportLens",
@@ -19,6 +20,7 @@ const projects = [
     vertical: "SMB Support",
     week: "Week 5",
     accent: "bg-emerald-500",
+    link: null,
   },
   {
     title: "AuditBuddy",
@@ -26,6 +28,7 @@ const projects = [
     vertical: "Finance & Audit",
     week: "Week 7",
     accent: "bg-yellow-500",
+    link: null,
   },
   {
     title: "ResearchAgent",
@@ -33,6 +36,7 @@ const projects = [
     vertical: "Skill Showcase",
     week: "Week 9",
     accent: "bg-purple-500",
+    link: null,
   },
   {
     title: "GuardrailsDemo",
@@ -40,6 +44,7 @@ const projects = [
     vertical: "Responsible AI",
     week: "Week 10",
     accent: "bg-rose-500",
+    link: null,
   },
 ];
 
@@ -161,13 +166,20 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold mb-2">{p.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">{p.description}</p>
-                <a href="https://studymate-ai-i4wtfqeim2zch8fnnpantb.streamlit.app/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-xs text-indigo-400 border border-indigo-500 px-3 py-1 rounded-full hover:bg-indigo-500 hover:text-white transition-colors"
->
-  Live Demo →
-</a>
+                {p.link ? (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-indigo-400 border border-indigo-500 px-3 py-1 rounded-full hover:bg-indigo-500 hover:text-white transition-colors"
+                  >
+                    Live Demo →
+                  </a>
+                ) : (
+                  <span className="text-xs text-slate-500 border border-slate-600 px-3 py-1 rounded-full">
+                    Coming Soon
+                  </span>
+                )}
               </div>
             ))}
           </div>
