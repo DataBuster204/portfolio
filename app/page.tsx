@@ -161,7 +161,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold mb-2">{p.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">{p.description}</p>
-                href="https://studymate-ai-i4wtfqeim2zch8fnnpantb.streamlit.app/"
+                <a href="https://studymate-ai-i4wtfqeim2zch8fnnpantb.streamlit.app/"
   target="_blank"
   rel="noopener noreferrer"
   className="text-xs text-indigo-400 border border-indigo-500 px-3 py-1 rounded-full hover:bg-indigo-500 hover:text-white transition-colors"
