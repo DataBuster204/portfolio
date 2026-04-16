@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const skills = [
   "Python", "LangChain", "LangGraph", "OpenAI API", "Claude API",
   "RAG Pipelines", "Vector Databases", "Supabase / pgvector",
@@ -66,8 +68,19 @@ export default function Home() {
       {/* NAV */}
       <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-800 z-50">
         <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-          <span className="text-indigo-400 font-bold text-lg tracking-wide">OD</span>
-          <div className="flex gap-8 text-sm text-slate-400">
+
+          {/* Logo mark */}
+          <a href="#" className="flex items-center gap-2 group" aria-label="Olumide Daramola home">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="#4F46E5"/>
+              <text x="16" y="22" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="700" fill="white" textAnchor="middle" letterSpacing="0.5">OD</text>
+            </svg>
+            <span className="text-slate-100 font-semibold text-sm tracking-wide group-hover:text-indigo-400 transition-colors">
+              Olumide Daramola
+            </span>
+          </a>
+
+          <div className="hidden md:flex gap-8 text-sm text-slate-400">
             <a href="#about" className="hover:text-indigo-400 transition-colors">About</a>
             <a href="#skills" className="hover:text-indigo-400 transition-colors">Skills</a>
             <a href="#projects" className="hover:text-indigo-400 transition-colors">Projects</a>
@@ -86,33 +99,57 @@ export default function Home() {
 
       {/* HERO */}
       <section className="max-w-5xl mx-auto px-6 pt-40 pb-32">
-        <p className="text-indigo-400 text-sm font-medium tracking-widest uppercase mb-4">
-          AI Solutions Developer
-        </p>
-        <h1 className="text-5xl font-bold leading-tight mb-6">
-          Hi, I&apos;m{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
-            Olumide Daramola
-          </span>
-        </h1>
-        <p className="text-slate-400 text-xl max-w-2xl leading-relaxed mb-10">
-          I build production-ready GenAI applications — custom chatbots, RAG pipelines,
-          intelligent document systems, and responsible AI tools — for businesses that want
-          to move faster with AI.
-        </p>
-        <div className="flex gap-4 flex-wrap">
-          <a
-            href="#projects"
-            className="bg-indigo-600 hover:bg-indigo-500 px-6 py-3 rounded-full font-medium transition-colors"
-          >
-            View Projects
-          </a>
-          <a
-            href="#contact"
-            className="border border-slate-700 hover:border-indigo-400 hover:text-indigo-400 px-6 py-3 rounded-full font-medium transition-colors"
-          >
-            Work With Me
-          </a>
+        <div className="flex flex-col md:flex-row md:items-center gap-12">
+
+          {/* Text content */}
+          <div className="flex-1">
+            <p className="text-indigo-400 text-sm font-medium tracking-widest uppercase mb-4">
+              AI Solutions Developer
+            </p>
+            <h1 className="text-5xl font-bold leading-tight mb-6">
+              Hi, I&apos;m{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+                Olumide Daramola
+              </span>
+            </h1>
+            <p className="text-slate-400 text-xl leading-relaxed mb-10">
+              I build production-ready GenAI applications — custom chatbots, RAG pipelines,
+              intelligent document systems, and responsible AI tools — for businesses that want
+              to move faster with AI.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <a
+                href="#projects"
+                className="bg-indigo-600 hover:bg-indigo-500 px-6 py-3 rounded-full font-medium transition-colors"
+              >
+                View Projects
+              </a>
+              <a
+                href="#contact"
+                className="border border-slate-700 hover:border-indigo-400 hover:text-indigo-400 px-6 py-3 rounded-full font-medium transition-colors"
+              >
+                Work With Me
+              </a>
+            </div>
+          </div>
+
+          {/* Headshot */}
+          <div className="flex-shrink-0 flex justify-center md:justify-end">
+            <div className="relative">
+              {/* Glow ring */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 blur-md opacity-40 scale-105" />
+              <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-indigo-500/50">
+                <Image
+                  src="/headshot.jpg"
+                  alt="Olumide Daramola — AI Solutions Developer"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
