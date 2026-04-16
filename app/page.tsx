@@ -20,7 +20,7 @@ const projects = [
     vertical: "SMB Support",
     week: "Week 5",
     accent: "bg-emerald-500",
-    link: null,
+    link: "https://supportlens-h8qqiopqkjeqcfzt3dsdmf.streamlit.app",
   },
   {
     title: "AuditBuddy",
