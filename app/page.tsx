@@ -140,7 +140,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 blur-md opacity-40 scale-105" />
               <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-indigo-500/50">
                 <Image
-                  src="/headshot.jpg"
+                  src="/headshot.png"
                   alt="Olumide Daramola — AI Solutions Developer"
                   fill
                   className="object-cover object-top"
