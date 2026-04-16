@@ -2,7 +2,18 @@ const skills = [
   "Python", "LangChain", "LangGraph", "OpenAI API", "Claude API",
   "RAG Pipelines", "Vector Databases", "Supabase / pgvector",
   "Next.js", "Streamlit", "FastAPI", "Docker",
-  "Prompt Engineering", "Guardrails AI", "LlamaIndex", "Vercel",
+  "Prompt Engineering", "Guardrails AI", "LlamaIndex", "Vercel", "Twilio",
+];
+
+const clientWork = [
+  {
+    client: "AB Ventures Hub",
+    industry: "Retail & Real Estate",
+    location: "Lagos, Nigeria",
+    description: "Built and deployed a 24/7 WhatsApp AI support bot that answers customer questions about phones, gadgets, and real estate properties. The bot escalates to a human agent when it cannot answer, ensuring no customer is left with a wrong response.",
+    stack: "FastAPI · LangChain · ChromaDB · OpenAI · Twilio · Render",
+    status: "Delivered",
+  },
 ];
 
 const projects = [
@@ -180,6 +191,36 @@ export default function Home() {
                     Coming Soon
                   </span>
                 )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENT WORK */}
+      <section id="clients" className="py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="text-indigo-400 text-sm font-medium tracking-widest uppercase mb-3">Client Work</p>
+          <h2 className="text-3xl font-bold mb-4">Delivered for Real Businesses</h2>
+          <p className="text-slate-400 text-lg mb-12">
+            Production AI systems built and deployed for actual clients.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {clientWork.map((c) => (
+              <div
+                key={c.client}
+                className="bg-slate-800 border border-emerald-700 rounded-2xl p-6"
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <span className="bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    {c.industry}
+                  </span>
+                  <span className="text-emerald-400 text-xs font-semibold">{c.status}</span>
+                </div>
+                <h3 className="text-lg font-bold mb-1">{c.client}</h3>
+                <p className="text-slate-500 text-xs mb-3">{c.location}</p>
+                <p className="text-slate-400 text-sm leading-relaxed mb-4">{c.description}</p>
+                <p className="text-xs text-slate-500">{c.stack}</p>
               </div>
             ))}
           </div>
