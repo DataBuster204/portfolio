@@ -37,11 +37,11 @@ const projects = [
   },
   {
     title: "AuditBuddy",
-    description: "Upload invoices, receipts, or financial reports. Extract structured data, flag anomalies, and export clean Excel summaries.",
+    description: "Upload a bank statement, financial report, or audit document. Get an instant AI summary, red flag analysis, Q&A chat, audit memo, and custom reports — all exportable.",
     vertical: "Finance & Audit",
     week: "Week 7",
     accent: "bg-yellow-500",
-    link: null,
+    link: "https://auditbuddy-2fcgcbghkoeb97yyqqsfdk.streamlit.app",
   },
   {
     title: "ResearchAgent",
