@@ -44,6 +44,14 @@ const projects = [
     link: "https://auditbuddy-2fcgcbghkoeb97yyqqsfdk.streamlit.app",
   },
   {
+  title: "MCP Server Demo",
+  description: "A secure, multi-tenant Model Context Protocol server that exposes financial GL data as scoped AI tools — with token-based auth and per-customer data isolation. Built in Python using Anthropic's MCP SDK.",
+  vertical: "Agentic AI",
+  week: "Week 8",
+  accent: "bg-indigo-500",
+  link: "https://github.com/DataBuster204/mcp-server-demo",
+  },
+  {
     title: "ResearchAgent",
     description: "A multi-agent research assistant that breaks down complex questions, retrieves sources, and produces fully cited reports.",
     vertical: "Skill Showcase",
