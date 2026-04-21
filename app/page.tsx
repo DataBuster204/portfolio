@@ -23,7 +23,6 @@ const projects = [
     title: "StudyMate AI",
     description: "Chat with your syllabus. Upload lecture notes or textbooks and ask questions, generate quizzes, and create flashcards instantly.",
     vertical: "Education",
-    week: "Week 3",
     accent: "bg-blue-500",
     link: "https://studymate-ai-i4wtfqeim2zch8fnnpantb.streamlit.app/",
   },
@@ -31,7 +30,6 @@ const projects = [
     title: "SupportLens",
     description: "An intelligent customer support widget that answers questions from a company knowledge base and escalates to humans when confidence is low.",
     vertical: "SMB Support",
-    week: "Week 5",
     accent: "bg-emerald-500",
     link: "https://supportlens-h8qqiopqkjeqcfzt3dsdmf.streamlit.app",
   },
@@ -39,23 +37,20 @@ const projects = [
     title: "AuditBuddy",
     description: "Upload a bank statement, financial report, or audit document. Get an instant AI summary, red flag analysis, Q&A chat, audit memo, and custom reports — all exportable.",
     vertical: "Finance & Audit",
-    week: "Week 7",
     accent: "bg-yellow-500",
     link: "https://auditbuddy-2fcgcbghkoeb97yyqqsfdk.streamlit.app",
   },
   {
-  title: "MCP Server Demo",
-  description: "A secure, multi-tenant Model Context Protocol server that exposes financial GL data as scoped AI tools — with token-based auth and per-customer data isolation. Built in Python using Anthropic's MCP SDK.",
-  vertical: "Agentic AI",
-  week: "Week 8",
-  accent: "bg-indigo-500",
-  link: "https://github.com/DataBuster204/mcp-server-demo",
+    title: "MCP Server Demo",
+    description: "A secure, multi-tenant Model Context Protocol server that exposes financial GL data as scoped AI tools — with token-based auth and per-customer data isolation. Built in Python using Anthropic's MCP SDK.",
+    vertical: "Agentic AI",
+    accent: "bg-indigo-500",
+    link: "https://github.com/DataBuster204/mcp-server-demo",
   },
   {
     title: "ResearchAgent",
     description: "Ask any complex question. Three AI agents collaborate — one breaks down the question, one searches the web for answers, one writes a fully cited report.",
-    vertical: "Skill Showcase",
-    week: "Week 9",
+    vertical: "Multi-Agent AI",
     accent: "bg-purple-500",
     link: "https://researchagent-ceqftswrcbnhjhthoneqya.streamlit.app",
   },
@@ -63,8 +58,35 @@ const projects = [
     title: "GuardrailsDemo",
     description: "A responsible AI showcase with visible prompt injection defense, PII redaction, and hallucination detection running side by side.",
     vertical: "Responsible AI",
-    week: "Week 10",
     accent: "bg-rose-500",
+    link: null,
+  },
+  {
+    title: "StoreIQ",
+    description: "WhatsApp-based sales and inventory agent for multi-store businesses. Get daily sales reports, query stock levels, track SKU performance, and receive proactive alerts — all via a chat interface.",
+    vertical: "Business Intelligence",
+    accent: "bg-green-500",
+    link: null,
+  },
+  {
+    title: "AI News Digest",
+    description: "Daily AI news curated for African business leaders — stripped down to what matters, with sharp opinionated commentary. Delivered automatically every morning.",
+    vertical: "Automation",
+    accent: "bg-orange-500",
+    link: null,
+  },
+  {
+    title: "AuditFlow",
+    description: "End-to-end AI-assisted audit workflow — from engagement letter to final report. Covers risk assessment, audit programme, fieldwork documentation, findings, and management letter.",
+    vertical: "Audit Tech",
+    accent: "bg-cyan-500",
+    link: null,
+  },
+  {
+    title: "ContentEngine",
+    description: "Social media content automation for LinkedIn and X. Generate posts, carousels, and threads from a topic or brief — with local context and brand tone built in.",
+    vertical: "Content AI",
+    accent: "bg-pink-500",
     link: null,
   },
 ];
@@ -221,9 +243,9 @@ export default function Home() {
       <section id="projects" className="bg-slate-900 py-24">
         <div className="max-w-5xl mx-auto px-6">
           <p className="text-indigo-400 text-sm font-medium tracking-widest uppercase mb-3">Projects</p>
-          <h2 className="text-3xl font-bold mb-4">12 Weeks. 5 Flagship Projects.</h2>
+          <h2 className="text-3xl font-bold mb-4">Production AI Systems.</h2>
           <p className="text-slate-400 text-lg mb-12">
-            Currently building in public. Each project ships with a live demo, GitHub repo, and case study.
+            Built and deployed across education, finance, audit, and business intelligence. Each project ships with a live demo and GitHub repo.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((p) => (
@@ -235,7 +257,6 @@ export default function Home() {
                   <span className={`${p.accent} text-white text-xs font-semibold px-3 py-1 rounded-full`}>
                     {p.vertical}
                   </span>
-                  <span className="text-slate-500 text-xs">{p.week}</span>
                 </div>
                 <h3 className="text-lg font-bold mb-2">{p.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">{p.description}</p>
@@ -367,12 +388,4 @@ export default function Home() {
             </a>
             <a href="https://github.com/DataBuster204" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
               className="text-slate-600 hover:text-slate-300 transition-colors">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            </a>
-          </div>
-        </div>
-      </footer>
-
-    </main>
-  );
-}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 
