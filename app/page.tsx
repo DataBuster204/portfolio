@@ -53,11 +53,11 @@ const projects = [
   },
   {
     title: "ResearchAgent",
-    description: "A multi-agent research assistant that breaks down complex questions, retrieves sources, and produces fully cited reports.",
+    description: "Ask any complex question. Three AI agents collaborate — one breaks down the question, one searches the web for answers, one writes a fully cited report.",
     vertical: "Skill Showcase",
     week: "Week 9",
     accent: "bg-purple-500",
-    link: null,
+    link: "https://researchagent-ceqftswrcbnhjhthoneqya.streamlit.app",
   },
   {
     title: "GuardrailsDemo",
